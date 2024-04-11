@@ -1,0 +1,121 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.sticky {
+  background-color: #333;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar a.active,
+.navbar a:hover,
+.navbar a:focus {
+  color: #d3bb02;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #d3bb02;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: visibility 0s, transform 0.3s ease-in-out;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after,
+.navbar a.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  padding: 0.5rem;
+  border-radius: 5px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+.navbar li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    display: none;
+    padding-top: 1rem;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+  }
+}

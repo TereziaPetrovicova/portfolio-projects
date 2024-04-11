@@ -1,0 +1,46 @@
+.portfolio {
+  background-color: #202020;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 150px;
+  background: linear-gradient(0deg, #202020, #121212 90%);
+  z-index: 1;
+}
+
+.portfolio-title {
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+
+.portfolio .card {
+  background-color: #181818;
+  transition: transform 0.3s ease-in-out, 0.3s ease-in-out;
+  box-shadow: 5px 5px 24px #111111, -5px -5px 24px #232323;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 17px #0a0a0a, -5px -5px 17px #222222;
+}
+
+.portfolio .card-icon {
+  width: 50px;
+  height: auto;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-content: center;
+  }
+}

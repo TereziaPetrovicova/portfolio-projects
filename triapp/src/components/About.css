@@ -1,0 +1,75 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #121212;
+  min-height: 100vh;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-info {
+  max-width: 1200px;
+  margin: auto;
+  padding: auto;
+  font-size: 1.2rem;
+  color: #b8bab1;
+}
+
+.about-info .text-4xl {
+  color: #a99602;
+  font-family: "Audrey", sans-serif;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.about-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.social-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.social-button,
+.contact-me-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #161616;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.social-button img,
+.contact-me-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-me-button {
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  color: #121212;
+  font-size: 1.25rem;
+  font-family: "Audrey", sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}

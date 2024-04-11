@@ -1,0 +1,62 @@
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 25px;
+  background: #1e1e1e;
+}
+
+.screen {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: inset 8px 8px 15px #0e0e0e, inset -8px -8px 15px #2e2e2e;
+}
+
+.result {
+  font-size: 1.5rem;
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input {
+  font-size: 2rem;
+  height: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  color: #fff;
+  background: #1e1e1e;
+  box-shadow: 5px 5px 10px #0e0e0e, -5px -5px 10px #2e2e2e;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:active {
+  box-shadow: inset 1px 1px 2px #0e0e0e, inset -1px -1px 2px #2e2e2e;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.equals {
+  grid-row: span 2;
+}

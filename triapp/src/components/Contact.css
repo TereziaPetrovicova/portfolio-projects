@@ -1,0 +1,79 @@
+.contact-section {
+  background: #161616;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 150px;
+  background: linear-gradient(0deg, #161616, #202020 90%);
+  z-index: 1;
+}
+
+.contact-title {
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+
+.neumorphic-form {
+  background-image: url("C:\Users\Diana\OneDrive\Počítač\portfolio-projects\triapp\public\jeremy-bishop-RKztS0K8Skg-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 17px #0a0a0a, -5px -5px 17px #222222;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 17px #0a0a0a, inset -5px -5px 17px #222222;
+  background: #161616;
+  color: #b8b8b8;
+}
+
+.send-button {
+  background-color: #d3bb02;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(255, 255, 255, 0.1);
+  color: #161616;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.send-button:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.1);
+}

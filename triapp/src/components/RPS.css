@@ -1,0 +1,87 @@
+.game {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #1f2a48;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game-header {
+  text-align: center;
+}
+
+.game-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.game-score {
+  background: #1e2b49;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  background: #1e2b49;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 6px solid transparent;
+}
+
+.option-rock {
+  border-color: #3b8ead;
+}
+.option-paper {
+  border-color: #ebb22d;
+}
+.option-scissors {
+  border-color: #ec9e0e;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-rock::before {
+  content: "✊";
+}
+
+.icon-paper::before {
+  content: "✋";
+}
+
+.icon-scissors::before {
+  content: "✌️";
+}
+
+.game-result {
+  text-align: center;
+}
+
+.game-rules {
+  margin-top: 30px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}

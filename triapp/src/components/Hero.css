@@ -1,0 +1,120 @@
+.hero-background {
+  background-image: url("C:\Users\Diana\OneDrive\Počítač\portfolio-projects\triapp\public\jeremy-bishop-RKztS0K8Skg-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.hero-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #121212 100%);
+  z-index: 10;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.name-title {
+  font-family: "Claire Amoreth", sans-serif;
+  font-weight: normal;
+  font-size: 15vw;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-image: url("C:\Users\Diana\OneDrive\Počítač\portfolio-projects\triapp\public\goldfoil3.jpg");
+  z-index: 2;
+}
+
+.role-title {
+  font-family: "Audrey", sans-serif;
+  font-weight: normal;
+  font-size: 2vw;
+  color: #ffffff;
+  position: absolute;
+  top: calc(28% + 15vw);
+  left: 63%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px;
+  height: 60px;
+  margin-top: 30rem;
+  background-color: #252525;
+  color: #ffffff;
+  font-family: "Audrey", sans-serif;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 100;
+}
+
+.hero-button::after,
+.hero-button::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  content: attr(data-content);
+}
+
+.hero-button::after {
+  opacity: 0;
+  background: #cdcdcd;
+  color: #323237;
+  transform: translateY(-50%) rotateX(90deg);
+  content: attr(data-back);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.hero-button:hover::after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+.hero-button::before {
+  opacity: 1;
+  background: #282828;
+  color: #ededed;
+  transform: translateY(0) rotateX(0);
+  content: attr(data-front);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.hero-button:hover::before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
