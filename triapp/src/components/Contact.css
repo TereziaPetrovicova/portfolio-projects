@@ -21,7 +21,7 @@
 }
 
 .neumorphic-form {
-  background-image: url("/jeremy-bishop-RKztS0K8Skg-unsplash.jpg");
+  background-image: url(%PUBLIC_URL%/jeremy-bishop-RKztS0K8Skg-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
