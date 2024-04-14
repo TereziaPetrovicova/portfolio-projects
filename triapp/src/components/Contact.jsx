@@ -31,10 +31,6 @@ const Contact = () => {
       className="contact-section flex flex-col justify-center items-center bg-[#161616] h-screen text-white py-16 px-8"
     >
       <h1 className="contact-title text-5xl font-bold mb-4">LET'S CONNECT</h1>
-      <p className="mb-4 text-lg">
-        As this form doesn’t work as I would wish, please contact me via
-        LinkedIn (link in the About section) :)
-      </p>
       <div className="neumorphic-form w-full max-w-4xl">
         <form onSubmit={sendEmail}>
           <div className="form-group">
