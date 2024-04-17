@@ -1,5 +1,5 @@
 .hero-background {
-  background-image: url(%PUBLIC_URL%/JBbackground.jpg);
+  background-image: url('../../public/JBbackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  background-image: url(%PUBLIC_URL%/goldfoil3.jpg);
+  background-image: url('../../public/goldfoil3.jpg');
   z-index: 2;
 }
 

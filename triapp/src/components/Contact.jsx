@@ -6,23 +6,14 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send the message, please try again.");
-        }
-      );
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(e.target)).toString(),
+    })
+      .then(() => alert("Message sent successfully!"))
+      .catch(() => alert("Failed to send the message, please try again."));
+
   };
 
   return (
@@ -32,7 +23,19 @@ const Contact = () => {
     >
       <h1 className="contact-title text-5xl font-bold mb-4">LET'S CONNECT</h1>
       <div className="neumorphic-form w-full max-w-4xl">
-        <form onSubmit={sendEmail}>
+        {/* <form name="contact" action="/" method="POST" onSubmit={sendEmail}> */}
+        <form
+          netlify-honeypot="bot-field"
+          id="contact-form"
+          data-netlify="true"
+          name="contact"
+          method="POST"
+          onSubmit={sendEmail}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="from_name" />
+          <input type="hidden" name="reply_to" />
+          <input type="hidden" name="message" />
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input

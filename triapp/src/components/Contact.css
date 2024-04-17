@@ -21,7 +21,7 @@
 }
 
 .neumorphic-form {
-  background-image: url(%PUBLIC_URL%/JBbackground.jpg);
+  background-image: url('../../public/JBbackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
